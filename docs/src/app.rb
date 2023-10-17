@@ -9,10 +9,12 @@ actions = {
 }
 
 view = ->(state, actions) {
-  h(:div, {}, [
-    h(:button, { onclick: ->(e) { actions[:increment].call(state, nil) } }, ['Click me!']),
-    h(:p, {}, ["Count is #{state[:count]}"])
-  ])
+  eval DomParser.parse(<<~HTML)
+    <div>
+      <button onclick='{->(e) { actions[:increment].call(state, nil) } }'>Click me!</button>
+      <p>{"Count is #{state[:count]}"}</p>
+    </div>
+  HTML
 }
 
 App.new(
