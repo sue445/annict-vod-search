@@ -1,18 +1,26 @@
 state = {
-  count: 0,
+  search_word: "",
 }
 
 actions = {
-  increment: ->(state, value) {
-    state[:count] += 1
-  }
+  update_search_word: -> (state, value) {
+    state[:search_word] = value
+  },
 }
 
 view = ->(state, actions) {
   eval DomParser.parse(<<~HTML)
     <div>
-      <button onclick='{->(e) { actions[:increment].call(state, nil) } }'>Click me!</button>
-      <p>{"Count is #{state[:count]}"}</p>
+      <div class="mb-3">
+        <label for="search_word" class="form-label">検索ワード</label>
+        <input type="text" class="form-control" id="search_word" placeholder="検索ワード"
+          onchange="{->(e) { actions[:update_search_word].call(state, e[:target][:value].to_s) } }"
+        />
+      </div>
+
+      <div class="btn-group">
+        <a class="btn btn-primary" role="button" target="_blank" href="https://animestore.docomo.ne.jp/animestore/sch_pc?searchKey=#{state[:search_word]}&vodTypeList=svod_tvod">dアニメストアで検索する</a>
+      </div>
     </div>
   HTML
 }
