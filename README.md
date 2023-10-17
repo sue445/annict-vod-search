@@ -1,2 +1,2 @@
 # annict-vod-search
-Annictに対応してるVODサービスを検索しやすくするためのツール
+[Annict](https://annict.com/) に対応してるVODサービスを検索しやすくするためのツール
