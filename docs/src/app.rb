@@ -19,7 +19,7 @@ view = ->(state, actions) {
       </div>
 
       <div class="btn-group">
-        <a class="btn btn-primary" role="button" target="_blank" href="https://animestore.docomo.ne.jp/animestore/sch_pc?searchKey=#{state[:search_word]}&vodTypeList=svod_tvod">dアニメストアで検索する</a>
+        <a class="btn btn-primary" role="button" target="_blank" href="https://animestore.docomo.ne.jp/animestore/sch_pc?searchKey=#{state[:search_word]}&vodTypeList=svod_tvod">dアニメストアで検索する<i class="bi bi-box-arrow-up-right"></i></a>
       </div>
     </div>
   HTML
