@@ -9,28 +9,10 @@ actions = {
   update_search_word: -> (state, value) {
     value = value.strip
     state[:search_word] = value
-    state[:encoded_search_word] = encode_uri(value)
+    state[:encoded_search_word] = CGI.escape(value)
     state[:escaped_search_word] = CGI.escapeHTML(value)
   },
 }
-
-# FIXME: ruby.wasmでURI.encodeが使えないため自前で実装している
-def encode_uri(str)
-  return "" unless str
-
-  encoded_str = ""
-  str.each_char do |char|
-    if /[A-Za-z0-9\-._~]/.match?(char)
-      encoded_str << char
-    else
-      char_bytes = char.encode('UTF-8').bytes
-      char_bytes.each do |byte|
-        encoded_str << "%" + byte.to_s(16).upcase
-      end
-    end
-  end
-  encoded_str
-end
 
 view = ->(state, actions) {
   eval DomParser.parse(<<~HTML)
