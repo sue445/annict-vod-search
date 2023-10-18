@@ -36,6 +36,7 @@ view = ->(state, actions) {
         <label for="search_word" class="form-label">検索ワード</label>
         <input type="text" class="form-control" id="search_word" placeholder="検索ワード"
           onchange="{->(e) { actions[:update_search_word].call(state, e[:target][:value].to_s) } }"
+          oninput="{->(e) { actions[:update_search_word].call(state, e[:target][:value].to_s) } }"
         />
       </div>
       <div class="mb-3">
