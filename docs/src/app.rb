@@ -15,12 +15,18 @@ actions = {
 def encode_uri(str)
   return "" unless str
 
-  # URLエンコードする文字を指定
-  special_characters = /[^A-Za-z0-9\-._~]/
-
-  str.gsub(special_characters) do |match|
-    "%" + match.unpack("H2" * match.bytesize).join("%").upcase
+  encoded_str = ""
+  str.each_char do |char|
+    if /[A-Za-z0-9\-._~]/.match?(char)
+      encoded_str << char
+    else
+      char_bytes = char.encode('UTF-8').bytes
+      char_bytes.each do |byte|
+        encoded_str << '%' + byte.to_s(16).upcase
+      end
+    end
   end
+  encoded_str
 end
 
 view = ->(state, actions) {
