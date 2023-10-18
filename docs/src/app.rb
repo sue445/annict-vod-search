@@ -5,6 +5,7 @@ state = {
 
 actions = {
   update_search_word: -> (state, value) {
+    value = value.strip
     state[:search_word] = value
     state[:encoded_search_word] = encode_uri(value)
   },
