@@ -3,6 +3,7 @@ require "cgi"
 state = {
   search_word: "",
   encoded_search_word: "",
+  escaped_search_word: "",
 }
 
 actions = {
