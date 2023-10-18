@@ -22,7 +22,7 @@ def encode_uri(str)
     else
       char_bytes = char.encode('UTF-8').bytes
       char_bytes.each do |byte|
-        encoded_str << '%' + byte.to_s(16).upcase
+        encoded_str << "%" + byte.to_s(16).upcase
       end
     end
   end
