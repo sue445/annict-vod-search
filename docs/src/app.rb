@@ -1,5 +1,15 @@
 require "cgi"
 
+# URL encode
+def u(value)
+  CGI.escape(value)
+end
+
+# HTML encode
+def e(value)
+  CGI.escapeHTML(value)
+end
+
 state = {
   search_word: "",
   uri_encoded_word: "",
