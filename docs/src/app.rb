@@ -1,11 +1,11 @@
 require "cgi"
 
-# URL encode
+# URL encode helper
 def url(value)
   CGI.escape(value)
 end
 
-# HTML encode
+# HTML encode helper
 def html(value)
   CGI.escapeHTML(value)
 end
