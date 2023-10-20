@@ -31,12 +31,12 @@ view = ->(state, actions) {
         />
       </div>
       <div class="mb-3">
-        <a role="button" target="_blank" rel="noopener" class="btn btn-info"    href="https://www.b-ch.com/search/text/?search_txt=#{url(state[:search_word])}"><i class="bi bi-search"></i>バンダイチャンネルで「#{html(state[:search_word])}」を検索する<i class="bi bi-box-arrow-up-right"></i></a>
-        <a role="button" target="_blank" rel="noopener" class="btn btn-dark"    href="https://ch.nicovideo.jp/search/#{url(state[:search_word])}?type=channel&mode=s&sort=c&order=d"><i class="bi bi-search"></i>ニコニコチャンネルで「#{html(state[:search_word])}」を検索する<i class="bi bi-box-arrow-up-right"></i></a>
-        <a role="button" target="_blank" rel="noopener" class="btn btn-primary" href="https://animestore.docomo.ne.jp/animestore/sch_pc?vodTypeList=svod_tvod&searchKey=#{url(state[:search_word])}"><i class="bi bi-search"></i>dアニメストアで「#{html(state[:search_word])}」を検索する<i class="bi bi-box-arrow-up-right"></i></a>
-        <a role="button" target="_blank" rel="noopener" class="btn btn-warning" href="https://www.amazon.co.jp/s?i=instant-video&k=#{url(state[:search_word])}"><i class="bi bi-search"></i>Amazon プライム・ビデオで「#{html(state[:search_word])}」を検索する<i class="bi bi-box-arrow-up-right"></i></a>
-        <a role="button" target="_blank" rel="noopener" class="btn btn-danger"  href="https://www.google.com/search?q=site%3Awww.netflix.com+#{url(state[:search_word])}"><i class="bi bi-search"></i>Netflixで「#{html(state[:search_word])}」を検索する<i class="bi bi-box-arrow-up-right"></i></a>
-        <a role="button" target="_blank" rel="noopener" class="btn btn-success" href="https://abema.tv/search?q=#{url(state[:search_word])}"><i class="bi bi-search"></i>Abemaで「#{html(state[:search_word])}」を検索する<i class="bi bi-box-arrow-up-right"></i></a>
+        <a role="button" target="_blank" rel="noopener" class="btn btn-info"    href="https://www.b-ch.com/search/text/?search_txt=#{url(state[:search_word])}"><i class="bi bi-search"></i>バンダイチャンネル(チャンネルID=107)で「#{html(state[:search_word])}」を検索する<i class="bi bi-box-arrow-up-right"></i></a>
+        <a role="button" target="_blank" rel="noopener" class="btn btn-dark"    href="https://ch.nicovideo.jp/search/#{url(state[:search_word])}?type=channel&mode=s&sort=c&order=d"><i class="bi bi-search"></i>ニコニコチャンネル(チャンネルID=165)で「#{html(state[:search_word])}」を検索する<i class="bi bi-box-arrow-up-right"></i></a>
+        <a role="button" target="_blank" rel="noopener" class="btn btn-primary" href="https://animestore.docomo.ne.jp/animestore/sch_pc?vodTypeList=svod_tvod&searchKey=#{url(state[:search_word])}"><i class="bi bi-search"></i>dアニメストア(チャンネルID=241)で「#{html(state[:search_word])}」を検索する<i class="bi bi-box-arrow-up-right"></i></a>
+        <a role="button" target="_blank" rel="noopener" class="btn btn-warning" href="https://www.amazon.co.jp/s?i=instant-video&k=#{url(state[:search_word])}"><i class="bi bi-search"></i>Amazon プライム・ビデオ(チャンネルID=243)で「#{html(state[:search_word])}」を検索する<i class="bi bi-box-arrow-up-right"></i></a>
+        <a role="button" target="_blank" rel="noopener" class="btn btn-danger"  href="https://www.google.com/search?q=site%3Awww.netflix.com+#{url(state[:search_word])}"><i class="bi bi-search"></i>Netflix(チャンネルID=244)で「#{html(state[:search_word])}」を検索する<i class="bi bi-box-arrow-up-right"></i></a>
+        <a role="button" target="_blank" rel="noopener" class="btn btn-success" href="https://abema.tv/search?q=#{url(state[:search_word])}"><i class="bi bi-search"></i>Abema(チャンネルID=260)で「#{html(state[:search_word])}」を検索する<i class="bi bi-box-arrow-up-right"></i></a>
       </div>
     </div>
   HTML
