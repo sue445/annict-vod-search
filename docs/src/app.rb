@@ -25,7 +25,7 @@ view = ->(state, actions) {
     <div>
       <div class="mb-3">
         <label for="search_word" class="form-label">検索ワード</label>
-        <input type="text" class="form-control" id="search_word" placeholder="検索ワード"
+        <input type="text" class="form-control" id="search_word" placeholder="アニメのタイトル"
           onchange="{->(e) { actions[:update_search_word].call(state, e[:target][:value].to_s) } }"
           oninput="{->(e) { actions[:update_search_word].call(state, e[:target][:value].to_s) } }"
         />
