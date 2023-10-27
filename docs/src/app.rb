@@ -7,6 +7,9 @@ end
 
 # HTML encode helper
 def html(value)
+  # FIXME: Workaround for syntax error
+  value = value.gsub("'", "\\\\'")
+
   CGI.escapeHTML(value)
 end
 
