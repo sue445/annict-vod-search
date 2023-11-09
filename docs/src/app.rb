@@ -34,11 +34,10 @@ view = ->(state, actions) {
         />
       </div>
       <div class="mb-3">
-        <a role="button" target="_blank" rel="noopener" class="btn btn-info"
-          href="https://www.b-ch.com/search/text/?search_txt=#{url(state[:search_word])}">
-           <i class="bi bi-search"></i>
-           バンダイチャンネル(チャンネルID=107)で「#{html(state[:search_word])}」を検索する
-           <i class="bi bi-box-arrow-up-right"></i>
+        <a role="button" target="_blank" rel="noopener" class="btn btn-info" href="https://www.b-ch.com/search/text/?search_txt=#{url(state[:search_word])}">
+          <i class="bi bi-search"></i>
+          バンダイチャンネル(チャンネルID=107)で「#{html(state[:search_word])}」を検索する
+          <i class="bi bi-box-arrow-up-right"></i>
         </a>
         <a role="button" target="_blank" rel="noopener" class="btn btn-dark" href="https://ch.nicovideo.jp/search/#{url(state[:search_word])}?type=channel&mode=s&sort=c&order=d">
           <i class="bi bi-search"></i>
