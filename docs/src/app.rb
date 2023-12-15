@@ -34,6 +34,11 @@ view = ->(state, actions) {
         />
       </div>
       <div class="mb-3">
+        <a role="button" target="_blank" rel="noopener" class="btn btn-danger" href="https://annict.com/search?q=#{url(state[:search_word])}">
+          <i class="bi bi-search"></i>
+          Annictで「#{html(state[:search_word])}」を検索する
+          <i class="bi bi-box-arrow-up-right"></i>
+        </a>
         <a role="button" target="_blank" rel="noopener" class="btn btn-info" href="https://www.b-ch.com/search/text/?search_txt=#{url(state[:search_word])}">
           <i class="bi bi-search"></i>
           バンダイチャンネル(チャンネルID=107)で「#{html(state[:search_word])}」を検索する
