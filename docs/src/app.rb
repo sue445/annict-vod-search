@@ -24,7 +24,7 @@ actions = {
 }
 
 view = ->(state, actions) {
-  eval DomParser.parse(<<~HTML)
+  eval RubyWasmVdom::DomParser.parse(<<~HTML)
     <div>
       <div class="mb-3">
         <label for="search_word" class="form-label">検索ワード</label>
@@ -73,7 +73,7 @@ view = ->(state, actions) {
   HTML
 }
 
-App.new(
+RubyWasmVdom::App.new(
   el: "#app",
   state:,
   view:,
