@@ -57,7 +57,8 @@ view = ->(state, actions) {
         <a role="button" target="_blank" rel="noopener" class="btn btn-warning" href="https://www.amazon.co.jp/s?i=instant-video&k=#{url(state[:search_word])}">
           <i class="bi bi-search"></i>
           Amazon プライム・ビデオ(チャンネルID=243)で「#{html(state[:search_word])}」を検索する
-          <i class="bi bi-box-arrow-up-right"></i></a>
+          <i class="bi bi-box-arrow-up-right"></i>
+        </a>
         <a role="button" target="_blank" rel="noopener" class="btn btn-danger" href="https://www.netflix.com/search?q=#{url(state[:search_word])}">
           <i class="bi bi-search"></i>
           Netflix(チャンネルID=244)で「#{html(state[:search_word])}」を検索する(ログイン版)
