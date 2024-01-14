@@ -58,9 +58,14 @@ view = ->(state, actions) {
           <i class="bi bi-search"></i>
           Amazon プライム・ビデオ(チャンネルID=243)で「#{html(state[:search_word])}」を検索する
           <i class="bi bi-box-arrow-up-right"></i></a>
+        <a role="button" target="_blank" rel="noopener" class="btn btn-danger" href="https://www.netflix.com/search?q=#{url(state[:search_word])}">
+          <i class="bi bi-search"></i>
+          Netflix(チャンネルID=244)で「#{html(state[:search_word])}」を検索する（ログイン版）
+          <i class="bi bi-box-arrow-up-right"></i>
+        </a>
         <a role="button" target="_blank" rel="noopener" class="btn btn-danger" href="https://www.google.com/search?q=site%3Awww.netflix.com+#{url(state[:search_word])}">
           <i class="bi bi-search"></i>
-          Netflix(チャンネルID=244)で「#{html(state[:search_word])}」を検索する
+          Netflix(チャンネルID=244)で「#{html(state[:search_word])}」を検索する（未ログイン版）
           <i class="bi bi-box-arrow-up-right"></i>
         </a>
         <a role="button" target="_blank" rel="noopener" class="btn btn-success" href="https://abema.tv/search?q=#{url(state[:search_word])}">
