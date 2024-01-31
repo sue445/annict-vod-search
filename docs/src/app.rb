@@ -74,6 +74,11 @@ view = ->(state, actions) {
           Abema(チャンネルID=260)で「#{html(state[:search_word])}」を検索する
           <i class="bi bi-box-arrow-up-right"></i>
         </a>
+        <a role="button" target="_blank" rel="noopener" class="btn btn-dark" href="https://ch.nicovideo.jp/search/#{url(state[:search_word])}?channel_id=ch2632720&mode=s&sort=t&order=d&type=video">
+          <i class="bi bi-search"></i>
+          dアニメストア ニコニコ支店(チャンネルID=306)で「#{html(state[:search_word])}」を検索する
+          <i class="bi bi-box-arrow-up-right"></i>
+        </a>
       </div>
     </div>
   HTML
