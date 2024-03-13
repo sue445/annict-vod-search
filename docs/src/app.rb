@@ -19,7 +19,7 @@ state = {
 
 actions = {
   update_search_word: -> (state, value) {
-    state[:search_word] = value.strip
+    state[:search_word] = value.strip.gsub("　", " ")
   },
 }
 
