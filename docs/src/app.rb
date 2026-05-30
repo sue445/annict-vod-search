@@ -1,8 +1,25 @@
-require "cgi"
-
 # URL encode helper
 def url(value)
-  CGI.escape(value)
+  result = ""
+  value.to_s.each_byte do |byte|
+    c = byte.chr
+    # Unreserved characters: alphanumeric and special characters (- _ . ~) remain unchanged
+    if (byte >= 97 && byte <= 122) || # a-z
+       (byte >= 65 && byte <= 90)  || # A-Z
+       (byte >= 48 && byte <= 57)  || # 0-9
+       c == '-' || c == '_' || c == '.' || c == '~'
+      result << c
+      # Space is converted to '+'
+    elsif c == ' '
+      result << '+'
+      # Other characters are encoded to percent-encoding (%XX format)
+    else
+      hex = byte.to_s(16).upcase
+      hex = "0#{hex}" if hex.length == 1
+      result << "%#{hex}"
+    end
+  end
+  result
 end
 
 # HTML encode helper
@@ -10,7 +27,12 @@ def html(value)
   # FIXME: Workaround for syntax error
   value = value.gsub("'", "\\\\'")
 
-  CGI.escapeHTML(value)
+  value.to_s
+     .gsub('&', '&amp;')
+     .gsub('<', '&lt;')
+     .gsub('>', '&gt;')
+     .gsub('"', '&quot;')
+     .gsub("'", '&#39;')
 end
 
 state = {
