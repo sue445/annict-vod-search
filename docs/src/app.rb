@@ -23,6 +23,11 @@ begin
     result
   end
 
+  def strip(str)
+    # `String#strip` doesn't work when multibyte word at picoruby.wasm
+    str.gsub(/^ +/, "").gsub(/ +$/, "")
+  end
+
   state = {
     search_word: "",
     search_word_url_encoded: "",
@@ -31,7 +36,7 @@ begin
   methods = {
     update_search_word: -> (event, state) {
       value = event[:target][:value].to_s
-      state[:search_word] = value.strip.gsub("　", " ")
+      state[:search_word] = strip(value).gsub("　", " ")
       state[:search_word_url_encoded] = url(state[:search_word])
     },
   }
