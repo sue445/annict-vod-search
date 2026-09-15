@@ -25,7 +25,7 @@ begin
 
   def strip(str)
     # `String#strip` doesn't work when multibyte word at picoruby.wasm
-    str.gsub(/^ +/, "").gsub(/ +$/, "")
+    str.gsub(/^ +/, "").gsub(/ +$/, "").gsub(/^\t+/, "").gsub(/\t+$/, "")
   end
 
   state = {
