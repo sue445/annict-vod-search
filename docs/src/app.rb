@@ -90,9 +90,29 @@ begin
           Abema(チャンネルID=260)で「{{ search_word }}」を検索する
           <i class="bi bi-box-arrow-up-right"></i>
         </a>
+        <a role="button" target="_blank" rel="noopener" class="btn btn-danger" href="https://fod.fujitv.co.jp/psearch/?keyword={{ search_word_url_encoded }}">
+          <i class="bi bi-search"></i>
+          FOD(チャンネルID=270)で「{{ search_word }}」を検索する
+          <i class="bi bi-box-arrow-up-right"></i>
+        </a>
+        <a role="button" target="_blank" rel="noopener" class="btn btn-success" href="https://www.hulu.jp/search?q={{ search_word_url_encoded }}">
+          <i class="bi bi-search"></i>
+          Hulu(チャンネルID=273)で「{{ search_word }}」を検索する
+          <i class="bi bi-box-arrow-up-right"></i>
+        </a>
+        <a role="button" target="_blank" rel="noopener" class="btn btn-dark" href="https://video.unext.jp/freeword?query={{ search_word_url_encoded }}">
+          <i class="bi bi-search"></i>
+          U-NEXT(チャンネルID=305)で「{{ search_word }}」を検索する
+          <i class="bi bi-box-arrow-up-right"></i>
+        </a>
         <a role="button" target="_blank" rel="noopener" class="btn btn-dark" href="https://ch.nicovideo.jp/search/{{ search_word_url_encoded }}?channel_id=ch2632720&mode=s&sort=t&order=d&type=video">
           <i class="bi bi-search"></i>
           dアニメストア ニコニコ支店(チャンネルID=306)で「{{ search_word }}」を検索する
+          <i class="bi bi-box-arrow-up-right"></i>
+        </a>
+        <a role="button" target="_blank" rel="noopener" class="btn btn-dark" href="https://tv.dmm.com/vod/list/?keyword={{ search_word_url_encoded }}">
+          <i class="bi bi-search"></i>
+          DMM TV(チャンネルID=314)で「{{ search_word }}」を検索する
           <i class="bi bi-box-arrow-up-right"></i>
         </a>
       </div>
