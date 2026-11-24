@@ -55,67 +55,77 @@ begin
           Annictで「{{ search_word }}」を検索する
           <i class="bi bi-box-arrow-up-right"></i>
         </a>
-        <a role="button" target="_blank" rel="noopener" class="btn btn-info" href="https://www.b-ch.com/search/text/?search_txt={{ search_word_url_encoded }}">
-          <i class="bi bi-search"></i>
-          バンダイチャンネル(チャンネルID=107)で「{{ search_word }}」を検索する
-          <i class="bi bi-box-arrow-up-right"></i>
-        </a>
-        <a role="button" target="_blank" rel="noopener" class="btn btn-dark" href="https://ch.nicovideo.jp/search/{{ search_word_url_encoded }}?type=channel&mode=s&sort=c&order=d">
-          <i class="bi bi-search"></i>
-          ニコニコチャンネル(チャンネルID=165)で「{{ search_word }}」を検索する
-          <i class="bi bi-box-arrow-up-right"></i>
-        </a>
-        <a role="button" target="_blank" rel="noopener" class="btn btn-primary" href="https://animestore.docomo.ne.jp/animestore/sch_pc?vodTypeList=svod_tvod&searchKey={{ search_word_url_encoded }}">
-          <i class="bi bi-search"></i>
-          dアニメストア(チャンネルID=241)で「{{ search_word }}」を検索する
-          <i class="bi bi-box-arrow-up-right"></i>
-        </a>
-        <a role="button" target="_blank" rel="noopener" class="btn btn-warning" href="https://www.amazon.co.jp/s?i=instant-video&k={{ search_word_url_encoded }}">
-          <i class="bi bi-search"></i>
-          Amazon プライム・ビデオ(チャンネルID=243)で「{{ search_word }}」を検索する
-          <i class="bi bi-box-arrow-up-right"></i>
-        </a>
-        <a role="button" target="_blank" rel="noopener" class="btn btn-danger" href="https://www.netflix.com/search?q={{ search_word_url_encoded }}">
-          <i class="bi bi-search"></i>
-          Netflix(チャンネルID=244)で「{{ search_word }}」を検索する(ログイン版)
-          <i class="bi bi-box-arrow-up-right"></i>
-        </a>
-        <a role="button" target="_blank" rel="noopener" class="btn btn-danger" href="https://www.google.com/search?q=site%3Awww.netflix.com+{{ search_word_url_encoded }}">
-          <i class="bi bi-search"></i>
-          Netflix(チャンネルID=244)で「{{ search_word }}」を検索する(未ログイン版)
-          <i class="bi bi-box-arrow-up-right"></i>
-        </a>
-        <a role="button" target="_blank" rel="noopener" class="btn btn-success" href="https://abema.tv/search?q={{ search_word_url_encoded }}">
-          <i class="bi bi-search"></i>
-          Abema(チャンネルID=260)で「{{ search_word }}」を検索する
-          <i class="bi bi-box-arrow-up-right"></i>
-        </a>
-        <a role="button" target="_blank" rel="noopener" class="btn btn-danger" href="https://fod.fujitv.co.jp/psearch/?keyword={{ search_word_url_encoded }}">
-          <i class="bi bi-search"></i>
-          FOD(チャンネルID=270)で「{{ search_word }}」を検索する
-          <i class="bi bi-box-arrow-up-right"></i>
-        </a>
-        <a role="button" target="_blank" rel="noopener" class="btn btn-success" href="https://www.hulu.jp/search?q={{ search_word_url_encoded }}">
-          <i class="bi bi-search"></i>
-          Hulu(チャンネルID=273)で「{{ search_word }}」を検索する
-          <i class="bi bi-box-arrow-up-right"></i>
-        </a>
-        <a role="button" target="_blank" rel="noopener" class="btn btn-dark" href="https://video.unext.jp/freeword?query={{ search_word_url_encoded }}">
-          <i class="bi bi-search"></i>
-          U-NEXT(チャンネルID=305)で「{{ search_word }}」を検索する
-          <i class="bi bi-box-arrow-up-right"></i>
-        </a>
-        <a role="button" target="_blank" rel="noopener" class="btn btn-dark" href="https://ch.nicovideo.jp/search/{{ search_word_url_encoded }}?channel_id=ch2632720&mode=s&sort=t&order=d&type=video">
-          <i class="bi bi-search"></i>
-          dアニメストア ニコニコ支店(チャンネルID=306)で「{{ search_word }}」を検索する
-          <i class="bi bi-box-arrow-up-right"></i>
-        </a>
-        <a role="button" target="_blank" rel="noopener" class="btn btn-dark" href="https://tv.dmm.com/vod/list/?keyword={{ search_word_url_encoded }}">
-          <i class="bi bi-search"></i>
-          DMM TV(チャンネルID=314)で「{{ search_word }}」を検索する
-          <i class="bi bi-box-arrow-up-right"></i>
-        </a>
       </div>
+      <fieldset class="mb-3">
+        <legend class="fs-5">Annict対応サイト</legend>
+        <div class="d-flex flex-wrap gap-2">
+          <a role="button" target="_blank" rel="noopener" class="btn btn-info" href="https://www.b-ch.com/search/text/?search_txt={{ search_word_url_encoded }}">
+            <i class="bi bi-search"></i>
+            バンダイチャンネル(チャンネルID=107)で「{{ search_word }}」を検索する
+            <i class="bi bi-box-arrow-up-right"></i>
+          </a>
+          <a role="button" target="_blank" rel="noopener" class="btn btn-dark" href="https://ch.nicovideo.jp/search/{{ search_word_url_encoded }}?type=channel&mode=s&sort=c&order=d">
+            <i class="bi bi-search"></i>
+            ニコニコチャンネル(チャンネルID=165)で「{{ search_word }}」を検索する
+            <i class="bi bi-box-arrow-up-right"></i>
+          </a>
+          <a role="button" target="_blank" rel="noopener" class="btn btn-primary" href="https://animestore.docomo.ne.jp/animestore/sch_pc?vodTypeList=svod_tvod&searchKey={{ search_word_url_encoded }}">
+            <i class="bi bi-search"></i>
+            dアニメストア(チャンネルID=241)で「{{ search_word }}」を検索する
+            <i class="bi bi-box-arrow-up-right"></i>
+          </a>
+          <a role="button" target="_blank" rel="noopener" class="btn btn-warning" href="https://www.amazon.co.jp/s?i=instant-video&k={{ search_word_url_encoded }}">
+            <i class="bi bi-search"></i>
+            Amazon プライム・ビデオ(チャンネルID=243)で「{{ search_word }}」を検索する
+            <i class="bi bi-box-arrow-up-right"></i>
+          </a>
+          <a role="button" target="_blank" rel="noopener" class="btn btn-danger" href="https://www.netflix.com/search?q={{ search_word_url_encoded }}">
+            <i class="bi bi-search"></i>
+            Netflix(チャンネルID=244)で「{{ search_word }}」を検索する(ログイン版)
+            <i class="bi bi-box-arrow-up-right"></i>
+          </a>
+          <a role="button" target="_blank" rel="noopener" class="btn btn-danger" href="https://www.google.com/search?q=site%3Awww.netflix.com+{{ search_word_url_encoded }}">
+            <i class="bi bi-search"></i>
+            Netflix(チャンネルID=244)で「{{ search_word }}」を検索する(未ログイン版)
+            <i class="bi bi-box-arrow-up-right"></i>
+          </a>
+          <a role="button" target="_blank" rel="noopener" class="btn btn-success" href="https://abema.tv/search?q={{ search_word_url_encoded }}">
+            <i class="bi bi-search"></i>
+            Abema(チャンネルID=260)で「{{ search_word }}」を検索する
+            <i class="bi bi-box-arrow-up-right"></i>
+          </a>
+          <a role="button" target="_blank" rel="noopener" class="btn btn-dark" href="https://ch.nicovideo.jp/search/{{ search_word_url_encoded }}?channel_id=ch2632720&mode=s&sort=t&order=d&type=video">
+            <i class="bi bi-search"></i>
+            dアニメストア ニコニコ支店(チャンネルID=306)で「{{ search_word }}」を検索する
+            <i class="bi bi-box-arrow-up-right"></i>
+          </a>
+        </div>
+      </fieldset>
+      <fieldset class="mb-3">
+        <legend class="fs-5">Annict非対応サイト</legend>
+        <div class="d-flex flex-wrap gap-2">
+          <a role="button" target="_blank" rel="noopener" class="btn btn-danger" href="https://fod.fujitv.co.jp/psearch/?keyword={{ search_word_url_encoded }}">
+            <i class="bi bi-search"></i>
+            FOD(チャンネルID=270)で「{{ search_word }}」を検索する
+            <i class="bi bi-box-arrow-up-right"></i>
+          </a>
+          <a role="button" target="_blank" rel="noopener" class="btn btn-success" href="https://www.hulu.jp/search?q={{ search_word_url_encoded }}">
+            <i class="bi bi-search"></i>
+            Hulu(チャンネルID=273)で「{{ search_word }}」を検索する
+            <i class="bi bi-box-arrow-up-right"></i>
+          </a>
+          <a role="button" target="_blank" rel="noopener" class="btn btn-dark" href="https://video.unext.jp/freeword?query={{ search_word_url_encoded }}">
+            <i class="bi bi-search"></i>
+            U-NEXT(チャンネルID=305)で「{{ search_word }}」を検索する
+            <i class="bi bi-box-arrow-up-right"></i>
+          </a>
+          <a role="button" target="_blank" rel="noopener" class="btn btn-dark" href="https://tv.dmm.com/vod/list/?keyword={{ search_word_url_encoded }}">
+            <i class="bi bi-search"></i>
+            DMM TV(チャンネルID=314)で「{{ search_word }}」を検索する
+            <i class="bi bi-box-arrow-up-right"></i>
+          </a>
+        </div>
+      </fieldset>
     </div>
   HTML
 
